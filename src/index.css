@@ -1,8 +1,9 @@
-body {
+html,body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +11,124 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,h2,h3{
+  color: #000000;
+}
+
+.nav-active {
+  color: grey;
+  transition: all .3s ease-out;
+}
+.contenedor{
+  text-align: center;
+  display: grid;
+  width: 100%;
+  height: 820px;
+  grid-template-areas: "head head"
+                       "listPage frontPage"
+                       "footer footer";
+  grid-template-rows: 80px 1fr 100px;
+  grid-template-columns: 250px 1fr;
+}
+
+.contenedor > .header{
+  grid-area: head;
+  background-color: #D4A5A5;
+}
+.contenedor > .list-Page{
+  grid-area: listPage;
+  background-color: #FFECDA;
+}
+.contenedor > .front-page{
+  grid-area: frontPage;
+  background-color: #F9FFEA;
+
+}
+.contenedor > .footer{
+  grid-area: footer;
+  background-color: #A6D0E4;
+
+}
+
+
+
+.header > ul{
+  margin: 0;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.header > ul > li{
+  margin-right: 5em;
+  list-style: none;
+}
+.header > ul > li > a{
+  text-decoration: none;
+  padding: 8px;
+  background-color: #F9FFEA;
+  color: black;
+  border-radius: 5%;
+} 
+.list-page-title{
+  border:1px solid black;
+  box-shadow: 0px 1px 5px 0px #000000, 5px 5px 10px 5px rgba(0,0,0,0);
+}
+.list-page-title > h2{
+  color: black;
+}
+
+
+.cita-card{
+  
+  margin-top: 1em!important;
+  width: 80%;
+  height: 100px;
+  background-color: #96d1d3;
+  margin: 0 auto;
+  box-shadow: 3px 2px 5px #1e1f1e;
+}
+.cita-card > .cita-card-head{
+  height: 25%;
+}
+.cita-card > .cita-card-body{
+  height: 50%;
+  display:flex;
+  align-items: center;
+}
+.cita-card > .cita-card-body >:first-child {
+  margin-right: 10px;
+  margin-left: 4px;
+}
+
+.cita-card > .cita-card-fechas{
+  height: 25%;
+}
+.cita-card > .cita-card-fechas > p{
+  margin: 0;
+}
+
+
+
+/* Form  */
+
+.container-form{
+  margin: 0 auto;
+  border: 1px solid rgb(14, 8, 8);
+  width: 60%;
+  box-shadow: 5px 4px 10px  #72b1ce;
+}
+.container-form > h5{
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.container-form-citas{
+
+  padding: 15px;
+}
+label{
+  display: inline!important;
 }
